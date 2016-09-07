@@ -12,3 +12,8 @@ mainWindow::~mainWindow()
 {
     delete ui;
 }
+
+void mainWindow::setWindowName(QString name)
+{
+    this->setWindowTitle(name);
+}
