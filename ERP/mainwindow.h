@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVBoxLayout>
+#include <QSpacerItem>
+#include "navigatormenu.h"
 
 namespace Ui {
 class mainWindow;
@@ -18,6 +21,7 @@ public:
 
 private:
     Ui::mainWindow *ui;
+    navigatorMenu *nm;
 };
 
 #endif // MAINWINDOW_H

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>navigatorMenu/homeIcon.png</file>
+        <file>navigatorMenu/inventoryIcon.png</file>
+    </qresource>
+</RCC>

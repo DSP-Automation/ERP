@@ -16,13 +16,22 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     fileHandler.cpp \
     debughandler.cpp \
-    parameterhandler.cpp
+    parameterhandler.cpp \
+    navigatormenu.cpp \
+    inventorycontent.cpp \
+    inventoryitem.cpp
 
 HEADERS  += \
     mainwindow.h \
     fileHandler.h \
     debughandler.h \
-    parameterhandler.h
+    parameterhandler.h \
+    navigatormenu.h \
+    inventorycontent.h \
+    inventoryitem.h
 
 FORMS    += \
     mainwindow.ui
+
+RESOURCES += \
+    icon_resources.qrc
