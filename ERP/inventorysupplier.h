@@ -1,12 +1,14 @@
 #ifndef INVENTORYSUPPLIER_H
 #define INVENTORYSUPPLIER_H
 
+#include <QObject>
 #include <QString>
 
-class inventorySupplier
+class inventorySupplier : public QObject
 {
+    Q_OBJECT
 public:
-    inventorySupplier(int id,QString name, int amount, float price_buy, float price_sell);
+    explicit inventorySupplier(int v_id, QString v_name, int v_amount, float v_price_buy, float v_price_sell, QObject *parent = 0);
     ~inventorySupplier();
 
     int getId() const;

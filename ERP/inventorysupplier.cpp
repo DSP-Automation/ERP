@@ -1,8 +1,12 @@
 #include "inventorysupplier.h"
 
-inventorySupplier::inventorySupplier(int id, QString name, int amount, float price_buy, float price_sell)
+inventorySupplier::inventorySupplier(int v_id, QString v_name, int v_amount, float v_price_buy, float v_price_sell, QObject *parent): QObjectData(parent)
 {
-
+    setId(v_id);
+    setName(v_name);
+    setAmount(v_amount);
+    setPrice_buy(v_price_buy);
+    setPrice_sell(v_price_sell);
 }
 inventorySupplier::~inventorySupplier()
 {

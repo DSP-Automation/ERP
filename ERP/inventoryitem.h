@@ -2,14 +2,16 @@
 #define INVENTORYITEM_H
 
 #include <QString>
+#include <QObject>
 #include "inventorysupplier.h"
 
 #define maxSuppliers 5
 
-class inventoryItem
+class inventoryItem : public QObject
 {
+    Q_OBJECT
 public:
-    inventoryItem(int id, QString name, QString code_internal, QString code_external, QString code_type, QString type, QString description, QVector<inventorySupplier> &value);
+    explicit inventoryItem(int v_id, QString v_name, QString v_code_internal, QString v_code_external, QString v_code_type, QString v_type, QString v_description, QVector<inventorySupplier *> &v_value, QObject *parent = 0);
     ~inventoryItem();
 
     int getId() const;
@@ -26,8 +28,8 @@ public:
     void setType(const QString &value);
     QString getDescription() const;
     void setDescription(const QString &value);
-    QVector<inventorySupplier> getSuppliers() const;
-    void setSuppliers(const QVector<inventorySupplier> &value);
+    QVector<inventorySupplier *> getSuppliers() const;
+    void setSuppliers(const QVector<inventorySupplier *> &value);
 
 private:
     int id;
@@ -37,7 +39,7 @@ private:
     QString code_type;
     QString type;
     QString description;
-    QVector <inventorySupplier> suppliers;
+    QVector<inventorySupplier *> suppliers;
 
 };
 

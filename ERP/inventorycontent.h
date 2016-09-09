@@ -4,10 +4,12 @@
 #include <QWidget>
 #include <QSql>
 #include <QSqlDatabase>
+#include <QSqlQuery>
 
 #include "inventoryitem.h"
 #include "databaseconnectioninfo.h"
 #include "debughandler.h"
+#include "inventorysupplier.h"
 
 
 class inventoryContent : public QWidget
@@ -23,7 +25,7 @@ signals:
 public slots:
 
 private:
-    QVector <inventoryItem> itemVector;
+    QVector <inventoryItem *> itemVector;
     QSqlDatabase db;
     bool databaseConnectionOpen;
     debugHandler dh;

@@ -1,8 +1,15 @@
 #include "inventoryitem.h"
 
-inventoryItem::inventoryItem(int id, QString name, QString code_internal, QString code_external, QString code_type, QString type, QString description, QVector<inventorySupplier> &value)
+inventoryItem::inventoryItem(int v_id, QString v_name, QString v_code_internal, QString v_code_external, QString v_code_type, QString v_type, QString v_description, QVector<inventorySupplier *> &v_value, QObject *parent) :QObject(parent)
 {
-
+    setId(v_id);
+    setName(v_name);
+    setCode_external(v_code_external);
+    setCode_internal(v_code_internal);
+    setCode_type(v_code_type);
+    setType(v_type);
+    setDescription(v_description);
+    setSuppliers(v_value);
 }
 inventoryItem::~inventoryItem()
 {
@@ -79,13 +86,15 @@ void inventoryItem::setDescription(const QString &value)
     description = value;
 }
 
-QVector<inventorySupplier> inventoryItem::getSuppliers() const
+QVector<inventorySupplier *> inventoryItem::getSuppliers() const
 {
     return suppliers;
 }
 
-void inventoryItem::setSuppliers(const QVector<inventorySupplier> &value)
+void inventoryItem::setSuppliers(const QVector<inventorySupplier *> &value)
 {
     suppliers = value;
 }
+
+
 
