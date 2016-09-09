@@ -2,6 +2,13 @@
 #define INVENTORYCONTENT_H
 
 #include <QWidget>
+#include <QSql>
+#include <QSqlDatabase>
+
+#include "inventoryitem.h"
+#include "databaseconnectioninfo.h"
+#include "debughandler.h"
+
 
 class inventoryContent : public QWidget
 {
@@ -9,9 +16,18 @@ class inventoryContent : public QWidget
 public:
     explicit inventoryContent(QWidget *parent = 0);
     ~inventoryContent();
+    int readItemsFromDatabase(QString server, QString username, QString password, QString database);
+
 signals:
 
 public slots:
+
+private:
+    QVector <inventoryItem> itemVector;
+    QSqlDatabase db;
+    bool databaseConnectionOpen;
+    debugHandler dh;
+
 };
 
 #endif // INVENTORYCONTENT_H

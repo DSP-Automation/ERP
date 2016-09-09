@@ -6,7 +6,7 @@
 class inventorySupplier
 {
 public:
-    inventorySupplier(int id, int amount, float price_buy, float price_sell);
+    inventorySupplier(int id,QString name, int amount, float price_buy, float price_sell);
     ~inventorySupplier();
 
     int getId() const;

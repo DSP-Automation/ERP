@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,7 +30,8 @@ HEADERS  += \
     navigatormenu.h \
     inventorycontent.h \
     inventoryitem.h \
-    inventorysupplier.h
+    inventorysupplier.h \
+    databaseconnectioninfo.h
 
 FORMS    += \
     mainwindow.ui
