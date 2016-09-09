@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     parameterhandler.cpp \
     navigatormenu.cpp \
     inventorycontent.cpp \
-    inventoryitem.cpp
+    inventoryitem.cpp \
+    inventorysupplier.cpp
 
 HEADERS  += \
     mainwindow.h \
@@ -28,7 +29,8 @@ HEADERS  += \
     parameterhandler.h \
     navigatormenu.h \
     inventorycontent.h \
-    inventoryitem.h
+    inventoryitem.h \
+    inventorysupplier.h
 
 FORMS    += \
     mainwindow.ui
